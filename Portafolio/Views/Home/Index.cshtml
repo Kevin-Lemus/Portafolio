@@ -1,0 +1,29 @@
+﻿@model HomeIndex
+
+@{
+    ViewData["Title"] = "Portafolio";
+
+    string Mayusculas(string valor){ return valor.ToUpper(); }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @Mayusculas("Kevin lemus")</h1>
+    <h2>Soy un desarrollador full stack especializado en .Net y React</h2>
+
+    <img 
+        id="foto"
+        src="/images/foto.jpeg" alt="Mi foto" />
+</div>
+
+<div class="row justify-content-center text-center bg-primary">
+    <div class="col col-md-7 seccion-bienvenida">
+        <h1>Bienvenido a mi portafolio</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+</div>
+
+<partial name="_Habilidades" />
+
+<partial name="_SecciónProyectos" model="Model.Proyectos"/>
